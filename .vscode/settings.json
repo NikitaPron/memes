@@ -1,0 +1,8 @@
+{
+  "liveServer.settings.port": 5501,
+  "editor.fontSize": 15,
+  "editor.tabSize": 2,
+  "editor.wordWrapColumn": 60,
+  "prettier.singleQuote": true,
+  "prettier.jsxSingleQuote": true
+}

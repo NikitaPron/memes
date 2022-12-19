@@ -1,0 +1,17 @@
+.closed_connection {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(37, 36, 36);
+}
+
+.closed_connection__container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: rgb(208, 208, 243);
+  width: 100vw;
+  height: 100vh;
+}
