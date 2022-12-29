@@ -25,7 +25,7 @@ export const ONE_MINUTE_MUSIC_MISTAKE = 'ONE_MINUTE_MUSIC_MISTAKE';
 export const CHANGE_MY_MEMES = 'CHANGE_MY_MEMES';
 //-----------------------------------------------------------------------
 
-export const ws = io();
+export const ws = io('http://localhost:2500/');
 ws.on(NEW_SITUATION, function (event) {
   const data = JSON.parse(event);
   store.dispatch(setSituation(data.situation));

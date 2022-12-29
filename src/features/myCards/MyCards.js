@@ -39,7 +39,10 @@ export function MyCards() {
             <img key={index} alt='mem' src={card} onClick={clickHandler}></img>
           );
         })}
-        <button onClick={buttonChangeMemesHandler}>Поменять</button>
+        <div
+          className='cards__btn-change'
+          onClick={buttonChangeMemesHandler}
+        ></div>
       </div>
     )
   );

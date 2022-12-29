@@ -1,18 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-color: aliceblue;
-  /* overflow: hidden; */
+  font-family: Rubik Bubbles;
+  overflow: hidden;
 }
 
 header {
   display: flex;
+  align-items: center;
   gap: 20px;
+  word-spacing: 3px;
 }
 
 header input {
-  width: 200px;
+  width: 150px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  box-shadow: 0px 3px 5px -1px rgb(139, 136, 136);
+  font-family: Rubik Bubbles;
+}
+
+#inputMusic {
+  width: 250px;
 }
 
 ::-webkit-input-placeholder {
@@ -25,19 +40,35 @@ header input {
 }
 
 .situation {
-  font-size: 30px;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 35px;
+  font-family: Rubik Bubbles;
   text-align: center;
+  word-spacing: 10px;
 }
 
 .cards {
   width: 100wh;
   display: flex;
-  justify-content: center;
   gap: 20px;
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.cards__btn-change {
+  align-self: center;
+  width: 40px;
+  height: 40px;
+  background-image: url('../src/icons/swap.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+
+.cards__btn-change:hover {
+  transition: 3s ease-in;
+  transform: rotate(720deg);
 }
 
 .cards__choosen {
@@ -53,14 +84,16 @@ header input {
   justify-content: center;
   font-size: 20px;
   font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Rubik Bubbles, Arial, Helvetica, sans-serif;
+  color: rgb(134, 122, 197);
   margin-top: 20px;
 }
 
 img {
   transition: all 0.3s;
   height: 300px;
-  width: 250px;
+  width: 15%;
+  /* aspect-ratio: 1/2; */
   border-radius: 20px;
   cursor: pointer;
   object-fit: cover;
@@ -71,7 +104,10 @@ img:hover {
 }
 
 .cards__choosen img {
-  height: 250px;
+  min-height: 100px;
+  height: 200px;
+  max-height: 250px;
+  width: 200px;
 }
 
 /* --------------------------------------------------  MAIN  ---------------------------------------------------------------- */
@@ -93,7 +129,6 @@ img:hover {
 }
 
 .main__footer {
-  color: black;
 }
 
 .situation__container {
@@ -115,7 +150,7 @@ img:hover {
   padding: 5px;
   border-radius: 5px;
   justify-content: space-between;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Rubik Bubbles, Arial, Helvetica, sans-serif;
 }
 
 .chat__input {
@@ -138,8 +173,6 @@ img:hover {
   background-color: white;
   border-radius: 5px;
   padding: 5px;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .chat__senderName {
@@ -148,7 +181,11 @@ img:hover {
 }
 
 .chat__messageText {
-  color: black;
+  color: rgb(95, 87, 87);
+}
+
+.count {
+  text-align: center;
 }
 
 /* ------------------- MEDIA =============================*/
@@ -169,8 +206,8 @@ img:hover {
   }
 
   .cards__choosen img {
-    height: 130px;
-    width: 90px;
+    height: 150px;
+    width: 130px;
     border-radius: 7px;
   }
 
@@ -187,9 +224,8 @@ img:hover {
   }
 
   .situation {
-    margin-left: auto;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
   }
 
   .situation__container {
@@ -219,6 +255,11 @@ img:hover {
 
   #inputName {
     display: block;
+  }
+}
+
+@media (max-width: 1250px) {
+  header {
   }
 }
 
