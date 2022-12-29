@@ -28,9 +28,8 @@ header input {
   font-size: 30px;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
-  margin-left: 150px;
+  text-align: center;
 }
-
 
 .cards {
   width: 100wh;
@@ -40,7 +39,6 @@ header input {
   overflow-x: auto;
   overflow-y: hidden;
 }
-
 
 .cards__choosen {
   display: flex;
@@ -60,7 +58,7 @@ header input {
 }
 
 img {
-  transition: all .3s;
+  transition: all 0.3s;
   height: 300px;
   width: 250px;
   border-radius: 20px;
@@ -71,7 +69,6 @@ img {
 img:hover {
   scale: 110%;
 }
-
 
 .cards__choosen img {
   height: 250px;
@@ -90,13 +87,14 @@ img:hover {
 
 .main__raw {
   display: flex;
+  flex-grow: 1;
   gap: 10px;
+  margin-top: 30px;
 }
 
 .main__footer {
   color: black;
 }
-
 
 .situation__container {
   display: flex;
@@ -107,52 +105,51 @@ img:hover {
 /* --------------------------------------------------  CHAT  ---------------------------------------------------------------- */
 
 .chat {
-background-color: rgb(30, 191, 240);
-display: flex;
-gap: 10px;
-flex-direction: column;
-min-width: 300px;
-max-width: 300px;
-height: 400px;
-padding: 5px;
-border-radius: 5px;
-justify-content: space-between;
-font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(30, 191, 240);
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  min-width: 300px;
+  max-width: 300px;
+  height: 400px;
+  padding: 5px;
+  border-radius: 5px;
+  justify-content: space-between;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .chat__input {
-bottom: 5px;
-outline: none;
-border: none;
-border-radius: 5px;
-padding: 5px;
+  bottom: 5px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 .chat__messages {
-overflow-y: scroll;
-display: flex;
-flex-direction: column;
-gap: 5px;
-overflow-x: hidden;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  overflow-x: hidden;
 }
 
 .chat__message {
-background-color: white;
-border-radius: 5px;
-padding: 5px;
-display: flex;
-flex-wrap: wrap;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .chat__senderName {
-font-weight: bold;
-padding-right: 5px;
+  font-weight: bold;
+  padding-right: 5px;
 }
 
 .chat__messageText {
   color: black;
 }
-
 
 /* ------------------- MEDIA =============================*/
 @media (max-width: 768px) {

@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { ws } from '../../websocket/Websocket';
+import { CHANGE_MY_MEMES, SOMEONE_CHOOSE, ws } from '../../websocket/Websocket';
 import { setIsSended } from './myCardsSlice';
 
 const isMobile =
@@ -16,7 +16,8 @@ export function MyCards() {
 
   function clickHandler(e) {
     if (!isSended) {
-      ws.send(
+      ws.emit(
+        SOMEONE_CHOOSE,
         JSON.stringify({
           userName: name,
           refImg: e.target.src,
@@ -27,11 +28,7 @@ export function MyCards() {
   }
 
   function buttonChangeMemesHandler() {
-    ws.send(
-      JSON.stringify({
-        event: 'CHANGE_MY_MEMES',
-      })
-    );
+    ws.emit(CHANGE_MY_MEMES, JSON.stringify({}));
   }
 
   return (

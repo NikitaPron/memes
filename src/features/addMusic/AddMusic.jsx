@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { ws } from '../../websocket/Websocket';
+import { NEW_MUSIC, ws } from '../../websocket/Websocket';
 
 export function AddMusic() {
   const [value, setValue] = useState('');
@@ -10,13 +10,13 @@ export function AddMusic() {
 
   function enterKeyHandler(e) {
     if (e.key === 'Enter' && value) {
-      ws.send(
+      ws.emit(
+        NEW_MUSIC,
         JSON.stringify({
           musicURL: value,
           userName: name,
         })
       );
-
       setValue('');
     }
   }
